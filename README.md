@@ -43,3 +43,7 @@ git branch -M main
 git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 git push -u origin main
 ```
+
+### Netlify
+
+You can drag the project folder into Netlify's manual deploy area, or connect the GitHub repository in Netlify. There is no build command; the publish directory is the project root.
