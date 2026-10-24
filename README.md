@@ -54,3 +54,7 @@ You can drag the project folder into Netlify's manual deploy area, or connect th
 - Replace the demo video with a café-related video you have permission to use.
 - Update the brand, menu, prices and contact details if desired.
 - Images are loaded from Unsplash URLs, so an internet connection is needed to display them.
+
+## Important note
+
+This is a front-end assignment demo. The booking form validates input in the browser but does not store or send a real reservation.
