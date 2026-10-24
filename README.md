@@ -26,3 +26,20 @@ A responsive, four-page café website created for a Web Technology HTML5/CSS/Jav
 1. Download or clone the repository.
 2. Open the project folder in VS Code.
 3. Open `index.html` in a browser, or use the VS Code Live Server extension.
+
+No build tools or packages are required.
+
+## Publish
+
+### GitHub
+
+Create a repository, then run these commands in the project folder (replace the URL with your repository URL):
+
+```bash
+git init
+git add .
+git commit -m "Create Brew & Bloom café website"
+git branch -M main
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git push -u origin main
+```
