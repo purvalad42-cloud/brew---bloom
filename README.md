@@ -20,3 +20,9 @@ A responsive, four-page café website created for a Web Technology HTML5/CSS/Jav
 - Click-to-enlarge gallery lightbox
 - Booking form validation and inline error messages
 - Print-friendly menu page
+
+## Run locally
+
+1. Download or clone the repository.
+2. Open the project folder in VS Code.
+3. Open `index.html` in a browser, or use the VS Code Live Server extension.
