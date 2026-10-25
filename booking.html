@@ -46,3 +46,46 @@
                             <p>hello@brewandbloom.example</p>
                         </div>
                     </div>  </div>
+                    <form class="booking-form" id="booking-form">
+                        <h2>Reservation request</h2>
+                        <p class="form-subtitle">Fields marked * are required.</p>
+                        <div class="form-grid">
+                            <div class="form-field"><label for="full-name">Full name *</label><input id="full-name" name="fullName"
+                                    type="text" placeholder="Your name" required minlength="2" maxlength="60" autocomplete="name"><small
+                                    class="field-error"></small></div>
+                            <div class="form-field"><label for="email">Email address *</label><input id="email" name="email" type="email"
+                                    placeholder="you@example.com" required autocomplete="email"><small class="field-error"></small></div>
+                            <div class="form-field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel"
+                                    placeholder="9876543210" required pattern="[6-9][0-9]{9}"
+                                    title="Enter a 10-digit Indian mobile number beginning with 6, 7, 8 or 9" autocomplete="tel"><small
+                                    class="field-error"></small></div>
+                            <div class="form-field"><label for="date">Reservation date *</label><input id="date" name="date" type="date"
+                                    required><small class="field-error"></small></div>
+                            <div class="form-field"><label for="time">Preferred time *</label><input id="time" name="time" type="time"
+                                    min="09:00" max="20:30" required><small class="field-error"></small></div>
+                            <div class="form-field"><label for="guests">Number of guests *</label><input id="guests" name="guests"
+                                    type="number" min="1" max="12" value="2" required><small class="field-error"></small></div>
+                            <div class="form-field"><label for="occasion">Occasion</label><select id="occasion" name="occasion">
+                                    <option value="casual">Just because</option>
+                                    <option value="birthday">Birthday</option>
+                                    <option value="date">Date</option>
+                                    <option value="work">Work / study</option>
+                                    <option value="other">Other</option>
+                                </select></div>
+                            <fieldset class="form-field full-field">
+                                <legend>Where would you prefer to sit? *</legend>
+                                <div class="radio-row"><label><input type="radio" name="seating" value="indoors" required>
+                                        Indoors</label><label><input type="radio" name="seating" value="outdoors">
+                                        Outdoors</label><label><input type="radio" name="seating" value="anywhere"> Either is fine</label>
+                                </div><small class="field-error"></small>
+                            </fieldset>
+                            <div class="form-field full-field"><label for="requests">Special requests</label><textarea id="requests"
+                                    name="requests" rows="4" maxlength="300"
+                                    placeholder="Allergies, accessibility needs, or anything else we should know?"></textarea></div>
+                            <div class="form-field full-field checkbox-field"><label><input type="checkbox" id="updates" name="updates"> I'd
+                                    like to hear about café updates and seasonal specials.</label></div>
+                            <div class="form-field full-field"><label class="checkbox-field"><input type="checkbox" name="confirm" required>
+                                    I confirm the details above are correct. *</label><small class="field-error"></small></div>
+                        </div>
+                        <button class="button button-primary form-submit" type="submit">Send reservation request</button>
+                        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>         </form>
