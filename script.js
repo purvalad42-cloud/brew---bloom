@@ -40,4 +40,27 @@ document.addEventListener('DOMContentLoaded', () => {
       menuToggle.textContent = '☰';
     }));
   }
+  // Gallery lightbox.
+  const lightbox = document.querySelector('.lightbox');
+  if (lightbox) {
+    const lightboxImage = lightbox.querySelector('img');
+    const lightboxCaption = lightbox.querySelector('p');
+    document.querySelectorAll('.gallery-item').forEach((item) => {
+      item.addEventListener('click', () => {
+        const image = item.querySelector('img');
+        lightboxImage.src = item.dataset.full || image.src;
+        lightboxImage.alt = image.alt;
+        lightboxCaption.textContent = item.querySelector('span')?.textContent || image.alt;
+        if (typeof lightbox.showModal === 'function') lightbox.showModal();
+        else lightbox.setAttribute('open', '');
+      });
+    });
+    lightbox.querySelector('.lightbox-close')?.addEventListener('click', () => lightbox.close());
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) lightbox.close();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.open) lightbox.close();
+    });
+  }
 });  
