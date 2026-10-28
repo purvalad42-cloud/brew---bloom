@@ -1,1 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+:root {
+    --bg: #fffdf9;
+    --surface: #ffffff;
+    --soft: #f7f1e9;
+    --text: #29251f;
+    --muted: #766e64;
+    --accent: #7d4f35;
+    --accent-dark: #5c3827;
+    --line: #e9dfd4;
+    --shadow: 0 18px 45px rgba(55, 38, 25, .09);
+    --header: rgba(255, 253, 249, .92)
+}
