@@ -99,4 +99,31 @@ document.addEventListener('DOMContentLoaded', () => {
       showFieldError(field, error);
       return !error;
     }
+    form.querySelectorAll('input, select, textarea').forEach((field) => {
+        field.addEventListener('blur', () => validateField(field));
+        field.addEventListener('change', () => validateField(field));
+        field.addEventListener('input', () => {
+          if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+        });
+      });
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const fields = [...form.querySelectorAll('input, select, textarea')].filter((field) => field.type !== 'radio');
+        const validFields = fields.map(validateField);
+        const radioValid = validateField(form.querySelector('input[name="seating"]'));
+        if (!validFields.every(Boolean) || !radioValid || !form.checkValidity()) {
+          message.textContent = 'Please check the highlighted fields and try again.';
+          message.className = 'form-message error';
+          form.reportValidity();
+          return;
+        }
+        const name = form.querySelector('#full-name').value.trim();
+        message.textContent = `Thanks, ${name}! Your demo reservation request looks good. No real booking was sent.`;
+        message.className = 'form-message success';
+        form.reset();
+        dateInput.min = localToday;
+        form.querySelectorAll('.field-error').forEach((error) => error.textContent = '');
+        form.querySelectorAll('[aria-invalid]').forEach((field) => field.removeAttribute('aria-invalid'));
+      });
+    }
 });  
