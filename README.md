@@ -51,7 +51,6 @@ You can drag the project folder into Netlify's manual deploy area, or connect th
 ## Customise before submitting
 
 - Replace the example address and map location with your chosen café location.
-- Replace the demo video with a café-related video you have permission to use.
 - Update the brand, menu, prices and contact details if desired.
 - Images are loaded from Unsplash URLs, so an internet connection is needed to display them.
 
