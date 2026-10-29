@@ -1916,3 +1916,99 @@ h2 em {
         height: 300px
     }
 }
+@media(max-width:430px) {
+    .brand {
+        font-size: 1.2rem
+    }
+
+    .hero h1 {
+        font-size: 3rem
+    }
+
+    .hero-image {
+        height: 320px
+    }
+
+    .hero-actions .button {
+        width: 100%
+    }
+
+    .menu-intro {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .gallery-grid {
+        grid-auto-rows: 150px
+    }
+
+    .gallery-item span {
+        font-size: 1rem;
+        left: 10px;
+        bottom: 10px
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr
+    }
+
+    .full-field {
+        grid-column: auto
+    }
+
+    .booking-form {
+        padding: 18px
+    }
+
+    .radio-row {
+        gap: 10px
+    }
+
+    .footer-links {
+        gap: 15px
+    }
+
+    .visit-strip .button {
+        width: 100%
+    }
+}
+
+@media print {
+
+    .site-header,
+    .site-footer,
+    .page-hero,
+    .menu-cta,
+    .print-button {
+        display: none !important
+    }
+
+    body {
+        background: #fff;
+        color: #000
+    }
+
+    .menu-section {
+        padding: 0;
+        max-width: none
+    }
+
+    .menu-table {
+        background: #fff
+    }
+
+    .menu-table th,
+    .menu-table td {
+        color: #000 !important;
+        border-color: #bbb
+    }
+
+    .menu-table .category-row th {
+        background: #eee !important;
+        color: #000 !important
+    }
+
+    .menu-table caption {
+        color: #333
+    }
+}
