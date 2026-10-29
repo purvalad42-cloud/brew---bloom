@@ -1740,3 +1740,39 @@ h2 em {
     height: 100%;
     border: 0
 }
+@media(max-width:950px) {
+    .site-header {
+        padding: 0 4%
+    }
+
+    .nav-links {
+        gap: 15px
+    }
+
+    .hero {
+        padding: 60px 6%;
+        gap: 5%
+    }
+
+    .hero-image {
+        height: 400px
+    }
+
+    .feature-grid {
+        gap: 14px
+    }
+
+    .feature-card {
+        padding: 23px
+    }
+
+    .booking-layout {
+        gap: 4%;
+        padding-left: 4%;
+        padding-right: 4%
+    }
+
+    .booking-form {
+        padding: 23px
+    }
+}
